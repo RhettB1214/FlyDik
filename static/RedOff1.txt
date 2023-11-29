@@ -1,0 +1,15 @@
+47, -60, 50.593
+48.436, -58.608, 45.48
+49.872, -57.216, 39.714
+51.309, -55.824, 32.955
+52.745, -54.433, 24.389
+54.181, -53.041, 10.179
+54.484, -52.747, 0
+54.484, -52.747, 0
+68.846, -38.828, 0
+endData
+122.8
+124
+200
+47, -60, 50.742, -56.374, 50.742, -56.374, 54.484, -52.747
+#PATH.JERRYIO-DATA {"appVersion":"0.4.1","format":"LemLib v0.4.x (inch, byte-voltage)","gc":{"robotWidth":14,"robotHeight":21,"robotIsHolonomic":false,"showRobot":true,"uol":2.54,"pointDensity":2,"controlMagnetDistance":0.7750015500031,"fieldImage":{"displayName":"VRC 2024 - Over Under","signature":"VRC 2024 - Over Under","origin":{"__type":"built-in"}}},"paths":[{"segments":[{"controls":[{"uid":"UkGnuM0Q3A","x":47,"y":-60,"lock":false,"visible":false,"heading":45,"__type":"end-point"},{"uid":"Gx0d8rZyKl","x":57.08832335329341,"y":-49.49101796407185,"lock":false,"visible":true,"heading":0,"__type":"end-point"}],"speedProfiles":[],"uid":"wo8vlpLGSB"},{"controls":[{"uid":"Gx0d8rZyKl","x":57.08832335329341,"y":-49.49101796407185,"lock":false,"visible":true,"heading":0,"__type":"end-point"},{"uid":"JVZwmTjkrR","x":44.49850299401198,"y":-40.374251497005986,"lock":false,"visible":true,"__type":"control"},{"uid":"sg7EFEbth8","x":59.693113772455085,"y":-32.9940119760479,"lock":false,"visible":true,"__type":"control"},{"uid":"EftYJCTQtQ","x":59.693113772455085,"y":-24.094311377245507,"lock":false,"visible":true,"heading":0,"__type":"end-point"}],"speedProfiles":[],"uid":"Ues10fwKOl"}],"pc":{"speedLimit":{"minLimit":{"value":0,"label":"0"},"maxLimit":{"value":127,"label":"127"},"step":1,"from":0,"to":127},"bentRateApplicableRange":{"minLimit":{"value":0,"label":"0"},"maxLimit":{"value":4,"label":"4"},"step":0.01,"from":1.36,"to":2.25},"maxDecelerationRate":122.8},"name":"Path","uid":"5QZyrOnAPS","lock":false,"visible":false},{"segments":[{"controls":[{"uid":"oTuD9TE6n2","x":47,"y":-60,"lock":false,"visible":true,"heading":45,"__type":"end-point"},{"uid":"luy4TFczUV","x":54.484,"y":-52.74700598802395,"lock":false,"visible":true,"heading":45,"__type":"end-point"}],"speedProfiles":[],"uid":"4d2hG1XriD"}],"pc":{"speedLimit":{"minLimit":{"value":0,"label":"0"},"maxLimit":{"value":127,"label":"127"},"step":1,"from":0,"to":124},"bentRateApplicableRange":{"minLimit":{"value":0,"label":"0"},"maxLimit":{"value":4,"label":"4"},"step":0.01,"from":1.36,"to":2.25},"maxDecelerationRate":122.8},"name":"Path","uid":"xVo6bTYgy0","lock":false,"visible":true}]}
