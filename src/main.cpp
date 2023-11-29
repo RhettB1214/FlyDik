@@ -205,17 +205,20 @@ void autonomous()
 	{
 		case 1:
 			drive.setPose(47,-60, 45);
-			drive.follow(RedOff1_txt, 15, 1500);
-			pros::delay(100);
-			/*std::cout<<"Wing Out"<<std::endl;
-			wingPnuem.set_value(1);
-			drive.moveTo(57.088, -49.491, 45, 500);
+			drive.follow(RedOff1_txt, 15, 1500, false);
+			/*drive.waitUntil(8);
+			std::cout<<"Wing Out"<<std::endl;
+			wingPnuem.set_value(1);*/
+			drive.waitUntilDone();
+			pros::delay(250);
+			drive.moveTo(57.088, -47.491, 35, 500, false);
 			pros::delay(100);
 			std::cout<<"Wing In"<<std::endl;
 			wingPnuem.set_value(0);
-			drive.setPose(57.088, -49.491, 0);
-			std::cout<<"Path 2 Started"<<std::endl;*/
-			drive.follow(RedOff2_txt, 15, 1500);
+			drive.waitUntilDone();
+			pros::delay(250);
+			std::cout<<"Path 2 Started"<<std::endl;
+			drive.follow(RedOff2_txt, 15, 1500, false);
 			break;
 		case 2:
 			drive.moveTo(0, 0, 90, 1000);
