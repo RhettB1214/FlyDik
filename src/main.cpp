@@ -8,6 +8,7 @@
 ASSET(RedOff1_txt);
 ASSET(RedOff2_txt);
 ASSET(RedOff3_txt);
+ASSET(RedOff4_txt);
 //ASSET(test_txt);
 
 /*End of Asset Definitions*/
@@ -218,8 +219,13 @@ void autonomous()
 			drive.waitUntilDone();
 			drive.follow(RedOff3_txt, 15, 4000);
 			drive.waitUntil(24);
+			master.rumble(".");
 			armMotor.move_relative(100, 100);
 			drive.waitUntilDone();
+			wingPnuem.set_value(1);
+			pros::delay(500);
+			drive.moveTo(poseX, poseY, 90, 250);
+			drive.follow(RedOff4_txt, 15, 1500);
 			
 			break;
 		case 2:
