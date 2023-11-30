@@ -53,6 +53,12 @@
 //Three-Wire Device Port Definitions
 #define WING_ADIDO 'H' //Defines a macro for the pnuematic wing solenoid adi port and sets it to three wire port H
 
+//Short Hands For Chassis
+#define poseX drive.getPose().x
+#define poseY drive.getPose().y
+#define poseTheta drive.getPose().theta
+
+
 
 
 #endif /* DEFINITIONS */
