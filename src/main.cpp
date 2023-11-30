@@ -222,10 +222,10 @@ void autonomous()
 			master.rumble(".");
 			armMotor.move_relative(100, 100);
 			drive.waitUntilDone();
-			wingPnuem.set_value(1);
-			pros::delay(500);
-			drive.moveTo(poseX, poseY, 90, 250);
-			drive.follow(RedOff4_txt, 15, 1500);
+			//wingPnuem.set_value(1);
+			//pros::delay(500);
+			//drive.moveTo(poseX, poseY, 90, 250);
+			//drive.follow(RedOff4_txt, 15, 1500);
 			
 			break;
 		case 2:
