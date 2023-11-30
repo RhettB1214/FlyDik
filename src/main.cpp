@@ -206,17 +206,20 @@ void autonomous()
 	{
 		case 1:
 			drive.setPose(41.94, -58.776, 225);
-			drive.follow(RedOff1_txt, 15, 1500, false);
-			drive.waitUntilDone();
 			wingPnuem.set_value(1);
 			pros::delay(500);
+			drive.follow(RedOff1_txt, 15, 1500, false);
+			drive.waitUntilDone();
 			wingPnuem.set_value(0);
+			pros::delay(250);
 			drive.follow(RedOff2_txt, 15, 1500, false);
 			drive.waitUntilDone();
 			drive.moveTo(drive.getPose().x, drive.getPose().y, 285, 250);
-			drive.follow(RedOff3_txt, 15, 4000);
 			drive.waitUntilDone();
-			armMotor.move_relative(15, 100);
+			drive.follow(RedOff3_txt, 15, 4000);
+			drive.waitUntil(24);
+			armMotor.move_relative(100, 100);
+			drive.waitUntilDone();
 			
 			break;
 		case 2:
