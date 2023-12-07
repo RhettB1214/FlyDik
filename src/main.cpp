@@ -9,6 +9,8 @@ ASSET(RedOff1_txt);
 ASSET(RedOff2_txt);
 ASSET(RedOff3_txt);
 ASSET(RedOff4_txt);
+ASSET(RedDef1_txt);
+ASSET(RedDef2_txt);
 //ASSET(test_txt);
 
 /*End of Asset Definitions*/
@@ -205,8 +207,10 @@ void autonomous()
 
 	switch(selector::auton)
 	{
-		case 1:
+		case 2:
 			drive.setPose(41.94, -58.776, 225);
+			//drive.moveTo(41.94, -58.776, 225, 250, true, 1000000);
+			//drive.waitUntilDone();
 			wingPnuem.set_value(1);
 			pros::delay(500);
 			drive.follow(RedOff1_txt, 15, 1500, false);
@@ -218,18 +222,36 @@ void autonomous()
 			drive.moveTo(drive.getPose().x, drive.getPose().y, 285, 250);
 			drive.waitUntilDone();
 			drive.follow(RedOff3_txt, 15, 4000);
-			drive.waitUntil(24);
-			master.rumble(".");
-			armMotor.move_relative(100, 100);
-			drive.waitUntilDone();
-			//wingPnuem.set_value(1);
+			//drive.waitUntil(24);
+			//master.rumble(".");
+			//armMotor.move(100);
 			//pros::delay(500);
-			//drive.moveTo(poseX, poseY, 90, 250);
-			//drive.follow(RedOff4_txt, 15, 1500);
+			//armMotor.move(0);
+			drive.waitUntilDone();
+			wingPnuem.set_value(1);
+			pros::delay(500);
+			drive.moveTo(poseX, poseY, 70, 250);
+			drive.waitUntilDone();
+			drive.follow(RedOff4_txt, 15, 1500);
 			
 			break;
-		case 2:
-			drive.moveTo(0, 0, 90, 1000);
+		case 1:
+			drive.setPose(-48, -60, 320);
+			drive.follow(RedDef1_txt, 15, 1500);
+			drive.waitUntil(20);
+			armMotor.move(127);
+			pros::delay(500);
+			armMotor.move(0);
+			drive.waitUntilDone();
+			drive.follow(RedDef2_txt, 15, 3000, false);
+			drive.waitUntil(10);
+			wingPnuem.set_value(1);
+			drive.waitUntil(42);
+			wingPnuem.set_value(0);
+			armMotor.move(127);
+			pros::delay(375);
+			armMotor.move(0);
+			drive.waitUntilDone();
 			break;
 	}	
 }
